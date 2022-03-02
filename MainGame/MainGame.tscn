@@ -1,0 +1,181 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://MainGame/MainGame.gd" type="Script" id=4]
+[ext_resource path="res://Enemy/Enemies.gd" type="Script" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 20.9622, 380.576 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 662.058, 10 )
+
+[node name="SpaceInvaders" type="Control"]
+margin_left = -0.768188
+margin_top = 1.23187
+margin_right = 1279.23
+margin_bottom = 721.232
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HUD" type="HBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Countdown" type="Label" parent="HUD"]
+margin_top = 13.0
+margin_bottom = 27.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CurrentScoreLabel" type="Label" parent="HUD"]
+margin_left = 4.0
+margin_top = 13.0
+margin_right = 90.0
+margin_bottom = 27.0
+text = "Current Score"
+
+[node name="CurrentScore" type="Label" parent="HUD"]
+margin_left = 94.0
+margin_top = 13.0
+margin_right = 102.0
+margin_bottom = 27.0
+text = "0"
+
+[node name="Border_Left" type="Area2D" parent="." groups=["left"]]
+position = Vector2( -1.53629, 369.479 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Left"]
+position = Vector2( -5.37704, -0.768158 )
+shape = SubResource( 1 )
+
+[node name="Border_Right" type="Area2D" parent="." groups=["right"]]
+position = Vector2( 1287.42, 368.711 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Right"]
+position = Vector2( -5.37704, -0.768158 )
+shape = SubResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1206.77, 352.768 )
+
+[node name="Border_Top" type="KinematicBody2D" parent="." groups=["top"]]
+position = Vector2( 646.934, -31.955 )
+
+[node name="TopCollider" type="CollisionShape2D" parent="Border_Top" groups=["top"]]
+position = Vector2( 0, 1 )
+shape = SubResource( 2 )
+
+[node name="Border_Bottom" type="KinematicBody2D" parent="." groups=["bottom"]]
+position = Vector2( 646.934, 748.484 )
+
+[node name="TopCollider" type="CollisionShape2D" parent="Border_Bottom" groups=["top"]]
+position = Vector2( 0, 1 )
+shape = SubResource( 2 )
+
+[node name="Enemies" type="Node2D" parent="."]
+position = Vector2( 705.16, 3.84076 )
+script = ExtResource( 5 )
+
+[node name="Enemy" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -936.392, 634.927 )
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -965.392, 470.927 )
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -822.392, 495.927 )
+
+[node name="Enemy4" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -1291.39, 527.927 )
+
+[node name="Enemy5" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -1099.39, 640.927 )
+
+[node name="Enemy6" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -785.392, 106.927 )
+
+[node name="Enemy7" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -967.392, 62.9274 )
+
+[node name="Enemy8" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -1137.39, 488.927 )
+
+[node name="Enemy9" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -834.392, 301.927 )
+
+[node name="Enemy10" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -1104.39, 24.9274 )
+
+[node name="Enemy11" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -966.392, 349.927 )
+
+[node name="Enemy12" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -565.392, 401.927 )
+
+[node name="Enemy13" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -651.392, 147.927 )
+
+[node name="Enemy14" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -991.392, 181.927 )
+
+[node name="Enemy15" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -1175.39, 273.927 )
+
+[node name="Enemy16" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -810.392, 654.927 )
+
+[node name="Enemy17" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -1359.39, 410.927 )
+
+[node name="Enemy18" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -1251.39, 143.927 )
+
+[node name="Enemy19" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -1523.39, 464.927 )
+
+[node name="Enemy20" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -1367.39, 47.9274 )
+
+[node name="Enemy21" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -1544.39, 1.92737 )
+
+[node name="Enemy22" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -1549.39, 169.927 )
+
+[node name="Enemy23" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -1905.39, 161.927 )
+
+[node name="Enemy24" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -1718.39, 58.9274 )
+
+[node name="Enemy25" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -1705.39, 406.927 )
+
+[node name="Enemy26" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -1630.39, 554.927 )
+
+[node name="Enemy27" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -1435.39, 283.927 )
+
+[node name="Enemy28" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -1461.39, 653.927 )
+
+[node name="Enemy29" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -1685.39, 285.927 )
+
+[node name="Enemy30" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -1839.39, 621.927 )
+
+[node name="Enemy31" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -1935.39, 342.927 )
+
+[node name="Enemy32" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -1896.39, 442.927 )
