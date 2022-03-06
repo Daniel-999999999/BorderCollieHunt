@@ -1,7 +1,18 @@
-# Software Development Fundamentals - Godot
+# Border Collie Hunt
+## Purpose
 
-This project has been created as the starter Godot project to align with the Software Development Fundamentals course at LTC.
+This project is to be used as the starting point for the development of the working Border Collie Hunt game, where the player must round-up the errant Sheep.
 
-Fork this project into your own account, and then clone it to your computer. 
 
-Open it in Godot, and follow the course provided.
+## Task
+
+Complete the various sections of the game as you develop your tutorial.
+
+
+# How to start
+
+Make you're logged into GitHub under your account. 
+
+Click the Green "Use this template" button. This will copy the entire website and make your own version of the repository.
+
+![Temple Button](images/templateISD.png)
