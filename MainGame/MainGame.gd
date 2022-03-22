@@ -16,10 +16,16 @@ func _ready():
 		print(currentTimer)
 	print("GAME OVER")
 	
-	GlobalVariables.previousScores.push_front( GlobalVariables.scoringInformation["currentScore"])
-	print(GlobalVariables.previousScores)
-	get_tree().change_scene("res://end.tscn")
+	if GlobalVariables.previousScores.size() < 5:
+		GlobalVariables.previousScores.push_front( GlobalVariables.scoringInformation["currentScore"])
+		print(GlobalVariables.previousScores)
+# warning-ignore:return_value_discarded
+		get_tree().change_scene("res://end.tscn")
+	else:
+		GlobalVariables.previousScores.remove(4)
+		GlobalVariables.previousScores.push_front(GlobalVariables.scoringInformation["currentScore"])
 
+# warning-ignore:unused_argument
 func _process(delta):
 	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
 	

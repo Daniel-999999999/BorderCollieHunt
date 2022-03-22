@@ -5,8 +5,11 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="Button" type="Button" parent="."]
-margin_right = 441.0
-margin_bottom = 327.0
+margin_left = 428.5
+margin_top = 186.22
+margin_right = 869.5
+margin_bottom = 513.22
+text = "Restart cause bad?"
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false

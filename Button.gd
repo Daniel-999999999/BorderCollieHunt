@@ -17,4 +17,5 @@ func _ready():
 
 
 func _on_Button_pressed():
+	GlobalVariables.scoringInformation["currentScore"] = 0
 	get_tree().change_scene("res://MainGame/MainGame.tscn")
